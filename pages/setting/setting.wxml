@@ -1,0 +1,32 @@
+<!-- pages/introduce/introduce.wxml -->
+<view class="introduce-wrapper">
+  <van-dialog id="van-dialog"/>
+  <van-cell-group>
+    <commonCell labelWidth="400rpx" label="头像「上传您的工作照」" 
+      key="urls" require icon="rightIcon" bindsendObj="updateValue" delTitle="{{ true}}"
+      urls="{{ urls }}"
+      inType="avatar" rightValue='{{true}}' />
+    <commonCell labelWidth="120rpx" label="姓名：" key="hcpName"
+     require icon="rightIcon" bindsendObj="updateValue" inType="input" 
+     rightValue='{{true}}' inpValue="{{ hcpName }}" />
+    <commonCell labelWidth="120rpx" label="性别：" key="gender" require 
+      icon="rightIcon" columns="{{genderList}}" bindsendObj="updateValue" 
+      inType="select" rightValue='{{true}}'  defValue="{{ gender }}" />
+    <commonCell labelWidth="120rpx" label="医院：" key="hciName" require 
+      bindsendObj="updateValue" inType="searchSelect" rightValue='{{true}}' 
+      inpValue="{{ hciName }}" />
+    <commonCell labelWidth="120rpx" label="科室：" key="departments" require 
+      bindsendObj="updateValue" inType="searchSelect" rightValue='{{true}}' 
+      inpValue="{{ departments }}" />
+    <commonCell labelWidth="120rpx" label="职称：" key="jobTitleId" require 
+      icon="rightIcon" columns="{{ titleList }}" bindsendObj="updateValue"
+      inType="select" rightValue='{{true}}' inpValue="{{ jobTitleId }}" />
+    <button class="getphone button-hover" open-type="getPhoneNumber" bindgetphonenumber="getPhone">
+      <commonCell labelWidth="120rpx" label="手机号：" key="phone" require icon="rightIcon"  
+        inpValue="{{ phone }}" bindsendObj="updateValue" inType="DisInput" rightValue='{{true}}' />
+    </button>
+  </van-cell-group>
+  <van-button type="primary" bindtap="saveDoctor" size="large" color='linear-gradient(133deg,rgba(4,101,248,1) 0%,rgba(115,167,248,1) 100%);' class="introduce-submit" custom-style="width:630rpx;height:80rpx;border-radius:6rpx;margin:220rpx auto 0;display:block; line-height:80rpx;">
+    保存
+  </van-button>
+</view>

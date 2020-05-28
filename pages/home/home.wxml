@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <van-dialog id="van-dialog" />
+  <!-- style="max-height:{{windowHeight}}px" -->
+  <scroll-view class="scroll-view" scroll-y="{{true}}" style="height:100%" bindscrolltolower="scrolltolower"  wx:if="{{ type == 'doc' }}">
+    <view class="doctorPage" wx:if="{{ type == 'doc' }}">
+      <calendar valueList="{{calendarObject.staList}}" legend="{{legend}}" bindsendObj='getCalendarData'></calendar>
+      <doctorPage wx:if="{{contentList && contentList.length}}" contentList="{{ contentList }}" noMore="{{noMore}}" isIos="{{isIos}}"/>
+      <view class="doctorEmpty">
+        <empty wx:if="{{(!calendarObject.flag&&!isLoading) || (!contentList.length&&!isLoading)}}" empty_text="暂无需要注射的患者" />
+        <button wx:if="{{!calendarObject.flag&&!isLoading}}" class="btnCommon addPatient"
+          bindtap="addPatient">添加患者</button>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="patientPage" wx:if="{{ type == 'pat' }}">
+    <patientHeader status="{{ status }}" hcpDetail="{{ hcpDetail }}"/>
+    <view class="find-doctor" wx:if="{{status!=1 && status!=2}}">
+      <button class="btns" bindtap="findButton">找医生</button>
+    </view>
+    <view class="toapply" wx:if="{{status==1}}">
+      <view class="text">
+        如被拒绝或失效，您可重新选择医生加入随访。
+      </view>
+    </view>
+    <scroll-view class="scroll-view" scroll-y="{{true}}" style="min-height:{{300}}rpx" bindscrolltolower="scrolltolower">
+      <patientContent status="{{ status }}" list="{{ list }}" noMore="{{noMore}}"/>
+    </scroll-view>
+  </view>
+</view>

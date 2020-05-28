@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="logins">
+<van-dialog id="van-dialog" />
+  <!-- <view class="apifmLogin" wx:if="{{wxlogin}}">
+    <view class="s-b">
+      <view class="s-l-b">
+        <text>患者管理 申请使用</text>
+      </view>
+      <view class="s-t-b">
+        <view class="s-t-i">
+          <text>·</text>你的手机号</view>
+        <view class="s-t-i">
+          <text>·</text>我们不会公布您的这些信息</view>
+        <view class="s-t-i">
+          <text>·</text>只是为了给您提供更好的服务</view>
+      </view>
+      <button class="l" open-type="getUserInfo" bindgetuserinfo="processLogin">允许</button>
+      <button class="c" bindtap="cancelLogin" type="default">拒绝</button>
+    </view>
+  </view> -->
+  <view class="usermotto">
+    <view class="title">选择您的身份</view>
+    <view class="buttonSide">
+      <button class="buttonTop" data-type="doc"
+        open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <view class="doctor">
+          <text class="text">我是医生</text>
+          <view class="text">I'm Doctor</view>
+        </view>
+        <image src="../../assets/imgs/svg/doctor.svg" class="image"></image>
+      </button>
+    </view>
+    <view class="buttonSide">
+      <button class="buttonbottom"  data-type="pat" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <view class="doctor">
+          <text class="text">我是患者</text>
+          <view class="text">I'm Patient</view>
+        </view>
+        <image src="../../assets/imgs/svg/case.svg" class="image"></image>
+      </button>
+    </view>
+  </view>
+  <view class="checkedBox">
+      <van-checkbox value="{{ checked }}" 
+        shape="square" icon-size="24rpx"
+        bind:change="onChange"></van-checkbox>
+        <view class="agree">我已阅读并同意 <text class="back" bindtap="jump">《针无忧用户协议》</text></view>
+    </view>
+</view>

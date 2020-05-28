@@ -1,0 +1,18 @@
+/* components/addPhone/addPhone.wxss */
+.addPhone{
+  padding: 20rpx 40rpx;
+}
+.addPhone .van-cell:after{
+  border: 1rpx solid rgba(216, 216, 216, 1);
+}
+.addPhone .phoneBtn button{
+  width:180rpx;
+  height:56rpx;
+  background:rgba(4,101,248,1);
+  border-radius:6rpx;
+  color:rgba(255,255,255,1);
+  border: none;
+}
+.addPhone .btnCommon{
+  margin-top: 70rpx;
+}

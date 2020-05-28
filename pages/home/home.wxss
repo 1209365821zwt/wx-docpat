@@ -1,0 +1,40 @@
+/* pages/home/home.wxss */
+.home{
+  height: 100%;
+}
+.find-doctor{
+  margin-top:24rpx;
+}
+.find-doctor .btns{
+  width:550rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  background:linear-gradient(133deg,rgba(4,101,248,1) 0%,rgba(115,167,248,1) 100%);
+  border-radius:6rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}
+.toapply{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30rpx 0;
+}
+.toapply .text{
+  width:550rpx;
+  height:80rpx;
+  background:rgba(234,238,239,1);
+  border-radius:6rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  line-height: 80rpx;
+  text-align: center;
+}
+.doctorEmpty{
+  height: 360rpx;
+  margin-bottom: 100rpx;
+}

@@ -1,0 +1,36 @@
+<!--pages/addPatient/addPatient.wxml-->
+<view class="PatientInfo">
+  <van-cell-group>
+    <van-field
+      value="{{ patient.patientName }}"
+      label="患者姓名："
+      disabled
+      readonly
+    />
+    <van-field
+      value="{{ patient.gender == 1 ? '男' : patient.gender == 2 ? '女' : '未知' }}"
+      label="性别："
+      disabled
+      readonly
+    />
+    <van-field
+      value="{{ patient.phone }}"
+      label="手机号："
+      disabled
+      readonly
+    />
+    <van-field
+      value="{{ patient.remarks }}"
+      label="备注："
+      type="textarea"
+      class="textareaT"
+      placeholder="请输入"
+      placeholder-style="color:#D8D8D8;"
+      maxlength="500"
+      bind:input="setRemarks"
+      autosize
+      border="{{ false }}"
+    />
+  </van-cell-group>
+  <button class="btnCommon saveBtn" bindtap="_doctorSavePatientRemarks">保存</button>
+</view>

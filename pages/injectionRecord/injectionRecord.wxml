@@ -1,0 +1,71 @@
+<!--pages/InjectionRecord/injectionRecord.wxml-->
+<view class="injectionRecord">
+  <van-dialog id="van-dialog"/>
+  <commonCell 
+    labelWidth="200rpx"
+    label="注射次数："
+    key="injectionNum"
+    inpValue="{{injectionNumS}}"
+    bindsendObj="updateValue"
+    inType="DisInput"/>
+  <commonCell 
+    labelWidth="200rpx"
+    label="本次注射时间："
+    require
+    key="injectionTime"
+    bindsendObj="updateValue"
+    icon="downIcon"
+    inpValue="{{injectionTime}}"
+    inType="dataTime"/>
+  <commonCell 
+    labelWidth="200rpx"
+    columns="{{columns}}"
+    icon="downIcon"
+    require
+    key="injectionPosition"
+    bindsendObj="updateValue"
+    defValue="{{injectionPosition}}"
+    label="注射部位："
+    inType="select"/>
+  <commonCell 
+    labelWidth="180rpx"
+    label="就诊记录："
+    key="visitRecords"
+    bindsendObj="updateValue"
+    urls="{{visitRecords}}"
+    inType="upload"/>
+    <commonCell 
+    labelWidth="200rpx"
+    label="患者感受："
+    wx:if="{{ type !== 'pat'}}"
+    key="patFeel"
+    inpValue="{{patFeel ? patFeel : '这次打针感觉有一定好转。'}}"
+    bindsendObj="updateValue"
+    inType="disabled"/>
+    <view class="pat" wx:if="{{ type == 'pat'}}">
+      <view class="commonLabel" style="width:200rpx">患者感受：</view>
+      <van-field
+        value="{{ patFeel }}"
+        label=""
+        maxlength="300"
+        type="textarea"
+        placeholder="请输入您此次注射的感受"
+        inpValue="{{patFeel ? patFeel : '这次打针感觉有一定好转。'}}"
+        placeholder-style="color:rgba(37, 58, 82, 0.3)"
+        autosize
+        bind:input="setContent"
+        border="{{ false }}"
+      />
+  </view>
+  <commonCell 
+    labelWidth="200rpx"
+    label="下次注射时间："
+    key="nextInjectionTime"
+    require
+    wx:if="{{ type == 'doc' && status !== 2}}"
+    bindsendObj="updateValue"
+    icon="downIcon"
+    inType="dataTime"/>
+    <view class="statusTitle" wx:if="{{ type == 'doc' && status !== 2}}">您需要选择下次注射时间以确认本次注射完成</view>
+    <button class="btnCommon" bindtap="saveInjectionRecord">保存</button>
+</view>

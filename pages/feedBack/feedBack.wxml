@@ -1,0 +1,26 @@
+<!--pages/feedBack/feedBack.wxml-->
+<view class="feedBack">
+  <van-dialog id="van-dialog"/>
+  <van-cell-group>
+    <van-field
+      value="{{ feedbackContent }}"
+      label=""
+      maxlength="300"
+      type="textarea"
+      placeholder="请输入您想反馈的问题或建议"
+      placeholder-style="color:rgba(37, 58, 82, 0.3)"
+      autosize
+      bind:input="setContent"
+      border="{{ false }}"
+    />
+    <commonCell 
+      labelWidth="180rpx"
+      label=""
+      key="feedbackImage"
+      bindsendObj="updateValue"
+      isBorder="{{ false }}"
+      delTitle="{{ true }}"
+      inType="upload"/>
+  </van-cell-group>
+  <button class="btnCommon" bindtap="saveBack">提交</button>
+</view>

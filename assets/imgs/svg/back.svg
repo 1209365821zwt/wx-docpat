@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="135px" viewBox="0 0 375 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>矩形</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-35.7542031%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#0465F8" offset="0%"></stop>
+            <stop stop-color="#73B9F3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="患者-首页" transform="translate(0.000000, -65.000000)" fill="url(#linearGradient-1)">
+            <path d="M0,65 L375,65 L375,165 C312.035315,188.333333 249.368649,200 187,200 C124.631351,200 62.2980179,188.333333 0,165 L0,65 Z" id="矩形"></path>
+        </g>
+    </g>
+</svg>

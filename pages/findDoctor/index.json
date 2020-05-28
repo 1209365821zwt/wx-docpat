@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "list":"../../components/searchList/list",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-sticky": "@vant/weapp/sticky/index"
+  },
+  "navigationBarTitleText": "找医生"
+}

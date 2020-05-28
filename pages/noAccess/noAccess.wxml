@@ -1,0 +1,8 @@
+<!--pages/noAccess/noAccess.wxml-->
+<view class="noAccess">
+  <view class="noAccess_content">
+    <image src="../../assets/imgs/noAccess.svg" class="imgs"></image>
+    <view class="noAccess_title">您的手机号无效，</view>
+    <view class="noAccess_title">请尽快联系管理员添加！</view>
+  </view>
+</view>

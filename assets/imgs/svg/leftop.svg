@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="13px" viewBox="0 0 17 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>“</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="60.5076024%" y1="77.4173824%" x2="39.1737038%" y2="23.2074833%" id="linearGradient-1">
+            <stop stop-color="#1BB8F7" offset="0%"></stop>
+            <stop stop-color="#F9107E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="lianmengqiyilushuaizhengruiheiti-Regular, lianmengqiyilushuaizhengruiheiti" font-size="44" font-weight="normal" opacity="0.12">
+        <g id="患者-医生详情（提交申请后）" transform="translate(-26.000000, -268.000000)" fill="url(#linearGradient-1)">
+            <text id="“">
+                <tspan x="24" y="300">“</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

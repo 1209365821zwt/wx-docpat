@@ -1,0 +1,7 @@
+<!--components/empty/empty.wxml-->
+<view class="empty">
+  <view class="empty_content">
+    <image src="../../assets/imgs/svg/empty.svg" class="empty_image"></image>
+    <view class="empty_text">{{empty_text}}</view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+/* pages/addPatient/addPatient.wxss */
+.PatientInfo{
+  padding: 0 40rpx 0 40rpx;
+  font-size: 28rpx;
+}
+.PatientInfo .textareaT .van-cell{
+  flex-direction: column;
+  padding-right: 0;
+}
+.PatientInfo .textareaT .van-cell .van-cell__value{
+  border: 2rpx solid #D8D8D8;
+  border-radius: 6rpx;
+  height: 274rpx !important;
+  margin-top: 12rpx;
+  padding: 24rpx 30rpx;
+}
+.PatientInfo .textareaT .van-field__body textarea{
+  height: 274rpx !important;
+}
+.PatientInfo .saveBtn{
+  width: 90%;
+  margin-top: 60rpx;
+}

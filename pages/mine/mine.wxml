@@ -1,0 +1,43 @@
+<!-- pages/mine/mine.wxml -->
+<view>
+  <view class="header" wx:if="{{type =='doc'}}" bindtap="goPage" data-key="setting">
+    <image src="../../assets/imgs/png/myBac.png" class="coverImg"></image>
+    <view class="set">
+      <image src="../../assets/imgs/svg/setting.svg"></image>
+    </view>
+    <view class="mine-content">
+      <view class="avatar">
+        <image src="{{doctor.headPortrait ? doctor.headPortrait :'../../assets/imgs/svg/touxiang.svg'}}"></image>
+      </view>
+      <view class="detail-content">
+        <view class="title">
+          <text>{{doctor.hcpName ?doctor.hcpName : ''}}</text>
+          <view>{{doctor.jobTitle ? doctor.jobTitle : ''}}</view>
+        </view>
+        <view class="det">
+          <text class="dept">{{doctor.departments ? doctor.departments : ''}}</text>
+          <text>{{doctor.hciName ? doctor.hciName : ''}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view  wx:else>
+    <patientDetail patient="{{patient}}"/>
+    <view class="line"/>
+  </view>
+  <view class="content">
+    <view class="content-list">
+      <view wx:for="{{ type==='pat' ? patientMenuList : doctorMenuList}}" wx:for-index="idx" wx:for-item="item" wx:key='idx' class="list-item" bindtap="goPage" data-key="{{item.key}}">
+        <view class="item-img">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="item-text">
+          {{item.text}}
+          <view class="right-arrow">
+            <image src="../../assets/imgs/svg/rightArrow.svg"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

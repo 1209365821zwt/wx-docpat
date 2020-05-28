@@ -1,0 +1,206 @@
+/* pages/pasdocDetail/index.wxss */
+.doctor-detail{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background:rgba(255,255,255,1);
+}
+.doctor-detail .patient-top{
+  width: 100%;
+  height: 270rpx;
+}
+.doctor-detail .inclubs{
+  margin-top:-240rpx;
+}
+ .doctor-detail .inclubs {
+  width: 100%;
+  height: 312rpx;
+  position: relative;
+}
+.doctor-detail .inclubs  image{
+  width:100%;
+  height: 100%;
+}
+.doctor-detail .inclubs .includes-detail{
+  position: absolute;
+  top: 76rpx;
+  left:96rpx;
+  display: flex;
+
+}
+.doctor-detail .inclubs .includes-detail image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.doctor-detail .inclubs .includes-detail .text{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 46rpx;
+}
+
+.doctor-detail .inclubs .includes-detail .text .tests{
+  height:50rpx;
+  font-size:36rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  line-height:50rpx;
+}
+.doctor-detail .inclubs{
+  width: 100%;
+  height: 312rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  position: relative;
+}
+.doctor-detail .inclubs .includes-submit{
+  position: absolute;
+  top: 76rpx;
+  left:96rpx;
+  display: flex;
+} 
+.doctor-detail .inclubs .includes-submit image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.doctor-detail .inclubs .includes-submit .text{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 46rpx;
+}
+.doctor-detail .inclubs .includes-submit .text .right .right-top{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.doctor-detail .inclubs .includes-submit .text .right .right-top .status .pending{
+  font-size:24rpx;
+  font-weight:400;
+  color:#FF9100;
+  line-height:24rpx;
+  padding:4rpx 8rpx;
+  border: 1rpx solid #FF9100;
+  border-radius: 16rpx;
+}
+.doctor-detail .inclubs .includes-submit .text .right .right-top .status .success{
+  font-size:24rpx;
+  font-weight:400;
+  color:#20C5AD;
+  line-height:24rpx;
+  padding:4rpx 8rpx;
+  border: 1rpx solid #20C5AD;
+  border-radius: 16rpx;
+}
+.doctor-detail .inclubs .includes-submit .text .right .right-top .name{
+  font-size:36rpx;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  padding-right: 20rpx;
+  line-height: 36rpx;
+}
+.doctor-detail .inclubs .includes-submit .text .right .right-top .title{
+  font-size:28rpx;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  line-height: 40rpx;
+  padding-right: 20rpx;
+}
+
+.doctor-detail .inclubs .includes-submit .text .right .right-bottom .job{
+  font-size:28rpx;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  padding-right: 28rpx;
+  line-height: 50rpx;
+}
+.right-bottom{
+  width: 350rpx;
+}
+.doctor-detail .inclubs .includes-submit .text .right .right-bottom .hcp{
+  font-size:28prx;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  line-height: 40rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:1;
+  -webkit-box-orient:vertical;
+}
+.doctor-content{
+  display: flex;
+  flex-direction: column;
+  padding: 80rpx 48rpx 0 48rpx;
+  margin-bottom: 220rpx;
+}
+.doctor-content .leftop{
+  width: 44rpx;
+  height: 44rpx;
+}
+.doctor-content .content{
+  flex: 1;
+  /* margin: 44rpx 64rpx; */
+  /* margin-left: 128rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.doctor-content .content text{
+  width: 440rpx;
+  font-size:40rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+  line-height:80rpx;
+}
+.doctor-content .bottomtop{
+  width: 100%;
+  height: 44rpx;
+  text-align: right;
+}
+.doctor-content .bottomtop image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.btns{
+  width: 100%;
+  margin-bottom: 50rpx;
+}
+.btns .wait{
+  width:550rpx;
+  height:80rpx;
+  background:rgba(234,238,239,1);
+  border-radius:6rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:#FF9100;
+  line-height:80rpx;
+}
+.btns .agree{
+  width:550rpx;
+  height:80rpx;
+  background:linear-gradient(133deg,rgba(255,69,0,1) 0%,rgba(255,162,128,1) 100%);
+  border-radius:6rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+
+}
+.btns .noData{
+  width:550rpx;
+  height:80rpx;
+  background:linear-gradient(133deg,rgba(4,101,248,1) 0%,rgba(115,167,248,1) 100%);border-radius:6rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+}

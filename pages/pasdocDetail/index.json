@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "patientHeader": "../../components/patientHeader/patientHeader"
+  },
+  "navigationBarTitleText": "医生详情"
+}

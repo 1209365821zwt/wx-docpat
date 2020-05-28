@@ -1,0 +1,87 @@
+/* components/vanCell/index.wxss */
+
+.patientDeatil-wrapper .header-bac {
+  height: 218rpx;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.patientDeatil-wrapper .header-bac image{
+  width: 100%;
+  height: 100%
+}
+.mine-content {
+  height: 360rpx;
+}
+
+.patientDeatil-wrapper .avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 36rpx;
+  z-index: 3;
+}
+.patientDeatil-wrapper .avatar image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.sex-wrapper {
+  width: 56rpx;
+  height: 56rpx;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sex-wrapper image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.coverImg{
+  height: 100%;
+  width: 100%;
+}
+
+.patientDeatil-wrapper .detail-content {
+  color: #253A52;
+  font-family: PingFangSC-Medium, PingFang SC;
+  text-align: center;
+}
+
+.patientDeatil-wrapper .name {
+  padding-top: 24rpx;
+  line-height: 1;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(37, 58, 82, 1);
+  letter-spacing: 2rpx;
+}
+
+.patientDeatil-wrapper .phone {
+  padding-top: 16rpx;
+  line-height: 1;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(37,58,82,1);
+}
+.patientDeatil-wrapper .mine-content{
+  position: relative;
+}
+.patientDeatil-wrapper .settingImg{
+  width: 36rpx;
+  height: 36rpx;
+  position: absolute;
+  right: 60rpx;
+  top: 16rpx;
+}

@@ -1,0 +1,21 @@
+<!--pages/findDoctor/index.wxml-->
+<!-- <Search></Search>  -->
+<view class="find-doctor">
+	<van-sticky>
+		<view class="search-input" bindtap="tapPage">
+			<image src="/assets/imgs/svg/Search.svg"></image>
+			<view class="input">请输入关键字</view>
+		</view>
+	</van-sticky>
+	<view class="list">
+    <van-sticky offset-top="{{ 47 }}">
+      <view class="top" bindtap="showProvince">
+        <view class="all"><text>{{city ? city :'全国'}}</text></view>
+        <image src="../../assets/imgs/svg/jiantou.svg"></image>
+      </view>
+    </van-sticky>
+		<van-tree-select wx:if="{{show}}" items="{{ provinceList }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" class="select" />
+		<list wx:if="{{!show}}" List="{{bindSource}}" inputValue="{{value}}" hiddenList="{{hiddenList}}" bind:scroll="scroll" noMore="{{noMore}}" bind:doctorDetail="doctorDetail"></list>
+		<view></view>
+	</view>
+</view>

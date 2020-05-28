@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "commonCell": "../../components/commonCell"
+  },
+  "navigationBarTitleText":"我的资料"
+}

@@ -1,0 +1,26 @@
+<!--components/doctorPage/doctorPage.wxml-->
+<view class="doctor_content">
+  <view wx:for="{{contentList}}" wx:key="index" class="view_box" data-id="{{item.id}}" bindtap="goPatientDetail">
+    <view class="headerImg">
+      <image class="icon" src="{{item.headPortrait ? item.headPortrait : '../../assets/imgs/svg/Mask.svg'}}"></image>
+      <image class="header_img" src="../../assets/imgs/svg/woman.svg" wx:if="{{item.gender == 2}}"></image>
+      <image class="header_img" src="../../assets/imgs/svg/man.svg" wx:if="{{item.gender == 1}}"></image>
+    </view>
+    <view class="view_conten">
+      <view class="conten">
+        <view class="name">{{item.patientName}}</view>
+        <view class="conten_type {{'conType' + item.status}}">
+						<text class="sure blue" wx:if="{{item.status==1 && type == 'doc'}}">待确认</text>
+						<text class="sure blue" wx:if="{{item.status==1 && type == 'pat'}}">待医生确认</text>
+						<text class="sure" wx:if="{{item.status==2}}">已确认</text>
+						<text class="sure outime" wx:if="{{item.status==3}}">已逾期{{item.beOverdue}}天</text>
+						<text class="sure waitinject" wx:if="{{item.status==0}}">待注射</text>
+        </view>
+      </view>
+      <view class="conten" >上次注射时间：{{item.preInjectionTime || ''}}</view>
+      <!-- <van-icon name="arrow" class="view_conten_icon"/> -->
+    </view>
+  </view>
+  <view class="noMore" hidden='{{noMore}}'>没有更多了...</view>
+  <view class="isIos" style="height: 100px;" wx:if="{{isIos&&contentList.length}}"></view>
+</view>

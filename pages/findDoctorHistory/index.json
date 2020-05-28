@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "List":"../../components/searchList/list",
+    "van-search": "@vant/weapp/search/index"
+  },
+  "navigationBarTitleText": "找医生"
+}

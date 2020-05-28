@@ -1,0 +1,16 @@
+/* pages/PatientData/PatentData.wxss */
+.PatientData{
+  padding: 0 40rpx;
+}
+.getphone{
+    background: transparent;
+    width: 100% !important;
+    margin: 0 !important;
+    display: inherit;
+    font-weight: normal;
+    padding: 0;
+    text-align: inherit;
+}
+.button-hover{
+    color: #253A52;
+}

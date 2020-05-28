@@ -1,0 +1,4 @@
+<!--pages/message/message.wxml-->
+<view class="main-message">
+<information informationList="{{informationList}}" type="{{type}}" bind:scroll="scroll" bind:delclick="delclick" noMore="{{noMore}}"></information>
+</view>

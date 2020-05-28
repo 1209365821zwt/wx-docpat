@@ -1,0 +1,125 @@
+/* components/vanCell/index.wxss */
+.comon_form {
+  margin-top: 12rpx;
+  position: relative;
+}
+
+.comon_form .view_itemCon {
+  margin-left: 24rpx;
+  display: flex;
+}
+
+.comon_form .icon {
+  color: #FF3400;
+  font-size: 24rpx;
+  position: absolute;
+  top: calc(50% - 22rpx);
+  left: 7rpx;
+}
+
+.comon_form input,
+.van-field__body {
+  line-height: 80rpx;
+  height: 80rpx;
+}
+
+.comon_form .fieldIn {
+  flex: 1;
+}
+
+.comon_form .rightValue {
+  text-align: right;
+  padding-right: 60rpx;
+}
+
+.uploader_con {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 6rpx;
+  border: 2rpx solid rgba(216, 216, 216, 1);
+  text-align: center;
+  font-size: 24rpx;
+  color: #929CA8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12rpx;
+}
+
+.commonStype {
+  border-bottom: 2rpx solid #D8D8D8;
+  height: 100%;
+  line-height: 80rpx;
+}
+
+.textareaB {
+  flex-direction: column;
+}
+
+.textareaB textarea {
+  line-height: 32rpx;
+  margin-bottom: 24rpx;
+}
+
+.commonUp {
+  margin-top: 40rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #D8D8D8;
+}
+
+.comon_form picker {
+  flex: 1
+}
+
+.placeC {
+  color: rgba(37, 58, 82, 0.3);
+}
+
+.picker .avatar-wrapper {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #eee;
+  overflow: hidden;
+}
+
+.avatar-upload {
+  align-items: center;
+  justify-content: space-between;
+  padding:  16rpx 0;
+}
+
+
+.right_icon {
+  position: absolute;
+  top: 0;
+  right: 12rpx;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.isAvatar .icon{
+  top: 54rpx;
+}
+
+.searchI{
+  display: flex;
+  position: relative;
+}
+.searchI picker{
+  width: 60rpx;
+  max-width: 60rpx;
+}
+.searchPick{
+  width: 60rpx;
+}
+.searchI .searchContent{
+  position: absolute;
+  background: white;
+  z-index: 99999;
+  top: 82rpx;
+  height: 500rpx;
+  overflow-y: auto;
+  width: 100%;  
+}

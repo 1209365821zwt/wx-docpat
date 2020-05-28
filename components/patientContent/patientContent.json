@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "empty": "../empty/empty",
+    "van-dialog": "@vant/weapp/dialog/index"
+
+  }
+}

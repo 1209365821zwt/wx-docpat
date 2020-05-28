@@ -1,0 +1,19 @@
+<!--pages/doctorIntroduce/doctorIntroduce.wxml-->
+<view class="doctorIntroduce">
+  <view class="introductBox">
+    <van-cell-group>
+      <van-field
+        custom-style="background:rgba(248,251,255,1);width:98%"
+        value="{{ presentation }}"
+        label=""
+        maxlength="50"
+        type="textarea"
+        placeholder="请输入你对随访患者想说的话"
+        autosize
+        bind:blur="setPresentation"
+        border="{{ false }}"
+      />
+    </van-cell-group>
+  </view>
+  <button class="btnCommon" bindtap="saveIntroduct">保存</button>
+</view>

@@ -1,0 +1,19 @@
+<!-- components/vanCell/index.wxml -->
+<view class="patientDeatil-wrapper">
+  <view class="mine-content" bindtap="goSetting">
+    <image src="../../assets/imgs/svg/setting.svg" class="settingImg" wx:if="{{ isSetting }}" ></image>
+    <view class="avatar">
+      <image src="{{patient.headPortrait ? patient.headPortrait : '../../assets/imgs/svg/Mask.svg'}}"></image>
+      <view class="sex-wrapper">
+        <image src="{{patient.gender ==2 ?'../../assets/imgs/svg/nv.svg' : '../../assets/imgs/svg/nan.svg'}}"></image>
+      </view>
+    </view>
+    <view class="detail-content">
+      <view class="name">{{patient.patientName ? patient.patientName : ''}}</view>
+      <view class="phone">{{patient.phone ? patient.phone : ''}}</view>
+    </view>
+  </view>
+  <view class="header-bac">
+    <image src="../../assets/imgs/png/patientBac.png"></image>
+  </view>
+</view>

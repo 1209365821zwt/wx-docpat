@@ -1,0 +1,90 @@
+<!--pages/followUp/followUp.wxml-->
+<view class="followUp">
+  <view class="handToAdd">
+    <van-dialog id="van-dialog"/>
+    <commonCell 
+      labelWidth="200rpx"
+      label="您的姓名："
+      key="patientName"
+      require
+      bindsendObj="updateValue"
+      inType="input"/>
+    <commonCell 
+      labelWidth="200rpx"
+      label="您的性别："
+      columns="{{list1}}"
+      key="gender"
+      require
+      icon="downIcon"
+      bindsendObj="updateValue"
+      inType="select"/>
+    <commonCell 
+      labelWidth="200rpx"
+      label="本次注射时间："
+      key="injectionTime"
+      require
+      icon="downIcon"
+      bindsendObj="updateValue"
+      inType="dataTime"/>
+    <commonCell 
+      labelWidth="200rpx"
+      label="是否首次注射："
+      key="isFirst"
+      require
+      icon="downIcon"
+      columns="{{ list }}"
+      bindsendObj="updateValue"
+      inType="select"/>
+    <commonCell 
+      labelWidth="200rpx"
+      columns="{{injectionList}}"
+      icon="downIcon"
+      require
+      key="injectionPosition"
+      bindsendObj="updateValue"
+      defValue="{{injectionPosition}}"
+      label="注射部位："
+      inType="select"/>
+    <commonCell 
+      labelWidth="180rpx"
+      label="就诊记录："
+      key="visitRecords"
+      bindsendObj="updateValue"
+      inType="upload"/>
+    <button style="width:100%;background:none" open-type="getPhoneNumber" bindgetphonenumber="getPhone">
+         <commonCell 
+      label="手机号："
+      key="phone"
+      placeV=" {{phone ? phone :'未绑定'}}"
+      require
+      icon="rightIcon"
+      defValue="phone"
+      bindsendObj="updateValue"
+      inType="DisInput"/>
+    </button>
+
+   
+    <view class="title">为了提醒您及时进行下次注射，系统需要绑定您的手机号。</view>
+    <view class="checkedBox">
+      <van-checkbox value="{{ checked }}" 
+        shape="square" icon-size="24rpx"
+        bind:change="onChange">我已阅读并同意</van-checkbox>
+      <view class="protocol" bindtap="jumpClick">《患者管理使用协议》</view>
+    </view>
+    <button class="btnCommon" bindtap="saveJoin">立即加入</button>
+    <view class="dialogBox">
+      <van-dialog
+        use-slot
+        title=""
+        confirmButtonText="返回首页"
+        custom-style="min-width: 640rpx;overflow:visible"
+        bind:confirm="goBack"
+        message="您的加入随访申请已提交，系统会通知医生\n在24小时内对您的申请进行审核，\n请您耐心等待…"
+        show="{{ show }}"
+      >
+        <view class="content">您的加入随访申请已提交，系统会通知医生在24小时内对您的申请进行审核，请您耐心等待…</view>
+        <image src="../../assets/imgs/png/joinIcon.png" class="diaogImg"/>
+      </van-dialog>
+    </view>
+  </view>
+</view>

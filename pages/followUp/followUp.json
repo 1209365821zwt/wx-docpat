@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "commonCell": "../../components/commonCell",
+    "van-checkbox": "@vant/weapp/checkbox/index"
+  },
+  "navigationBarTitleText": "加入随访"
+}

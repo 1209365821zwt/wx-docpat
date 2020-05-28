@@ -1,0 +1,65 @@
+button {
+  padding: 0 !important;
+}
+
+.van-dialog__message {
+  font-size: 28rpx;
+}
+
+.van-dialog__footer {
+  background: rgba(248, 251, 255, 1);
+}
+
+.van-dialog__footer button:not([size='mini']) {
+  width: 100% !important;
+  font-size: 28rpx;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.van-cell:after {
+  border-bottom: 2rpx solid #D8D8D8 !important;
+}
+.btnCommon{
+  min-width: 550rpx;
+  width: 90%;
+  height: 80rpx;
+  background:linear-gradient(133deg,rgba(4,101,248,1) 0%,rgba(115,167,248,1) 100%);
+  border-radius:6rpx;
+  font-size: 32rpx;
+  color: #fff;
+  line-height: 80rpx;
+  margin-top: 40rpx;
+  margin-bottom: 100rpx;
+}
+view{
+  font-size: 28rpx;
+}
+.tabsStyle .van-tabs__line{
+  background-color: rgba(4, 101, 248, 1);
+  /* width: 10px !important;
+  transform: translateX(280px) translateX(-50%);
+  transition-duration: 0.3s; */
+}
+.tabsStyle .van-tab--active{
+  color: rgba(4, 101, 248, 1)
+}
+.tabsStyle .van-tabs--line .van-tabs__wrap {
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.tabsStyle .van-ellipsis{
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.van-uploader__wrapper .van-uploader__file{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}

@@ -1,0 +1,43 @@
+/* pages/followUp/followUp.wxss */
+.followUp{
+  padding: 40rpx 20rpx;
+  overflow-y: scroll;
+}
+.followUp .title{
+  color: #929CA8;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 24rpx;
+}
+.followUp .checkedBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90rpx;
+}
+.followUp .checkedBox .protocol{
+  font-size: 24rpx;
+  color: #0A6AF8;
+}
+.followUp .van-checkbox{
+  justify-content: center;
+  align-items: center;
+}
+.followUp .van-checkbox__label{
+  font-size: 24rpx;
+  color: #253A52;
+}
+.followUp .content{
+  padding: 126rpx 34rpx 34rpx 34rpx;
+  line-height:  44rpx;
+  text-align: center;
+  text-indent: 3rpx; 
+}
+.followUp .diaogImg{
+  width: 200rpx;
+  height: 192rpx;
+  position: absolute;
+  top: -96rpx;
+  left: calc(50% - 100rpx);
+  z-index: 999999;
+}

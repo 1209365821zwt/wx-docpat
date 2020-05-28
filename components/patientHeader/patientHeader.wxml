@@ -1,0 +1,36 @@
+<!--components/patientHeader/patientHeader.wxml-->
+<view class="patientHeader">
+  <view class="patient-top">
+    <image src="../../assets/imgs/svg/back.svg"></image>
+  </view>
+  <view class="patient-detail">
+    <view class="includes" data-item="{{hcpDetail}}" data-status="{{status}}" bindtap="jumpDetail">
+      <image src="../../assets/imgs/svg/backIcon.svg"></image>
+      <view class="includes-detail">
+        <image src="../../assets/imgs/svg/touxiang.svg"></image>
+        <view class="text" wx:if="{{status==0 || status==3 || status==4 || status==5}}">
+          <text class="tests"> 您暂未加入医生随访</text>
+        </view>
+      </view>
+      <view class="includes-submit" wx:if="{{status==1 || status==2}}">
+        <image src="{{hcpDetail.headPortrait ? hcpDetail.headPortrait : '../../assets/imgs/svg/touxiang.svg'}}"></image>
+        <view class="text">
+          <view class="right">
+            <view class="right-top">
+              <text class="name">{{hcpDetail.hcpName || ''}}</text>
+              <text class="title">{{hcpDetail.jobTitle || ''}}</text>
+              <view class="status">
+                <text wx:if="{{status==1}}" class="pending">审核中</text>
+                <text wx:elif="{{status==2}}" class="success">已同意</text>
+              </view>
+            </view>
+            <view class="right-bottom">
+              <text class="job">{{hcpDetail.departments || ''}}</text>
+              <text class="hcp">{{hcpDetail.hciName || ''}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

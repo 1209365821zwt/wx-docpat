@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="361px" height="156px" viewBox="0 0 361 156" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>编组 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,0 L341,0 C343.209139,-4.05812251e-16 345,1.790861 345,4 L345,136 C345,138.209139 343.209139,140 341,140 L4,140 C1.790861,140 2.705415e-16,138.209139 0,136 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-1"></path>
+        <filter x="-3.5%" y="-8.6%" width="107.0%" height="117.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="94.5530447%" id="radialGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#009BDF" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.0132767%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#009BDF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="92.0304096%" y1="77.4173824%" x2="6.69481523%" y2="23.2074833%" id="linearGradient-6">
+            <stop stop-color="#F9107E" offset="0%"></stop>
+            <stop stop-color="#1BB8F7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="患者-首页" transform="translate(-7.000000, -77.000000)">
+            <g id="编组-2" transform="translate(15.000000, 85.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="蒙版">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(-34.000000, -40.000000)">
+                        <circle id="Oval-2" fill="url(#radialGradient-4)" opacity="0.1" cx="375" cy="140" r="15"></circle>
+                        <circle id="Oval-2备份" fill="url(#radialGradient-4)" opacity="0.1" cx="323" cy="46" r="15"></circle>
+                        <circle id="Oval-3" fill="url(#linearGradient-5)" opacity="0.08" cx="39.5" cy="39.5" r="39.5"></circle>
+                        <circle id="Oval-4" fill="url(#linearGradient-6)" opacity="0.05" cx="177" cy="159" r="10"></circle>
+                        <circle id="Oval-4备份" fill="url(#linearGradient-6)" opacity="0.05" cx="340.5" cy="39.5" r="12.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

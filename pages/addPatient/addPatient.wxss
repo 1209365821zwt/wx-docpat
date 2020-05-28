@@ -1,0 +1,30 @@
+/* pages/addPatient/addPatient.wxss */
+.addPatient{
+  height: 100%;
+  overflow-y: scroll;
+}
+.addPatient .tab_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.addPatient .tab_content .tab_title{
+  font-size: 36rpx;
+  color: rgba(37, 58, 82, 1);
+  line-height: 56rpx;
+  text-align: center;
+  margin-top: 120rpx;
+}
+.addPatient .tab_content .imageB{
+  width: 430rpx;
+  height: 430rpx;
+}
+.addPatient .tab_content .image_title{
+  color: rgba(187, 192, 195, 1);
+  margin-top: 12rpx;
+}
+.addPatient .handToAdd{
+  padding: 30rpx;
+  padding-top: 6rpx;
+}

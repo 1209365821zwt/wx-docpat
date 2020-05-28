@@ -1,0 +1,46 @@
+<!--components/information/information.wxml-->
+<view class="main-informations">
+ <scroll-view  class="scroll-view" scroll-y="{{true}}" style="max-height:{{windowHeight}}px" bindscrolltolower="scrolltolower"  wx:if="{{informationList && informationList.length}}">
+  <van-swipe-cell
+    id="swipe-cell2"
+    right-width="{{ 65 }}"
+    name="消息列表"
+    class="lists"
+    bind:close="onClose"
+    wx:for="{{informationList}}"
+    wx:key="index"
+  > 
+      <van-cell-group>
+        <view class="main-group"  bindtap="toDetailsTap" data-ids="{{item.id}}">
+          <view class="left">
+          <view class="hands">
+            <image src="../../assets/imgs/svg/hands.svg" wx:if="{{type=='doc'}}"></image>
+            <image src="../../assets/imgs/svg/jiaru.svg" wx:if="{{type=='pat'}}"></image>
+            <text class="icon" wx:if="{{item.isRead==0}}"></text>
+          </view>
+          </view>
+          <view class="right">
+          <view class="right-left">
+          <text class="title">{{item.megTitle}}</text>
+          <view class="content">{{item.megContent}}</view>
+          </view>
+          <view class="right-two">
+            <view class="time">
+            {{item.createTimeStr}}
+            </view>
+          </view>
+          </view>
+        </view>
+    </van-cell-group>
+      <view slot="right" class="van-swipe-cell__right" bindtap="handClick" data-id="{{item.id}}">删除</view>
+  </van-swipe-cell>
+    <view class="noMore" hidden="{{noMore}}">没有更多....</view>
+
+</scroll-view>
+<empty wx:else empty_text="暂无需要注射的患者" />
+  <view class="noMore" hidden="{{!informationList || !informationList.length || noMore}}">没有更多....</view>
+
+</view>
+
+
+

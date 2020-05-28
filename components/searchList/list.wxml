@@ -1,0 +1,51 @@
+<!--components/searchList/list.wxml-->
+<view class="list">
+  <scroll-view hidden="{{hiddenList}}" class="scroll-view" scroll-y="{{true}}" style="max-height:{{windowHeight}}px" bindscrolltolower="scrolltolower" >
+  <view wx:if="{{List.length>0 && bindSource.length<=0}}" class="main-list" wx:for="{{ List}}" wx:key="index" data-item="{{item}}" bindtap="jumpclick">
+   <view class="left">
+   <image src="{{item.headPortrait ? item.headPortrait : '../../assets/imgs/svg/touxiang.svg'}}"></image>
+   </view>
+   <view class="right">
+   <view class="rightop" >
+    <view class="part">
+    <text >{{item.hcpName ? item.hcpName : ''}}</text></view>
+    <text class="job">{{item.jobTitle}}</text>
+   </view>
+   <view class="rightbottom">
+   <view class="part">
+     <text >{{item.departments ? item.departments : ''}}</text>
+   </view>
+   <view class="hcipart">
+   <text >{{item.hciName ? item.hciName : ''}}</text>
+   </view>
+   </view>
+   </view>
+  </view>
+   <view wx:if="{{twoSearchList.length>0}}" class="main-list" wx:for="{{ twoSearchList}}" wx:key="index" data-item="{{item}}" bindtap="jumpclick">
+   <view class="left">
+   <image src="{{item.headPortrait ? item.headPortrait : '../../assets/imgs/svg/touxiang.svg'}}"></image>
+   </view>
+   <view class="right">
+   <view class="rightop">
+    <view class="part">
+    <rich-text nodes="{{item.hcpStr}}"></rich-text>
+    {{item.hcpStr ? '' : item.hcpName == null ? '' : item.hcpName}}
+    </view>
+    <text class="job">{{item.jobTitle}}</text>
+   </view>
+   <view class="rightbottom">
+     <view class="part">
+   <rich-text nodes="{{item.depStr}}"></rich-text>
+   {{item.depStr ? '' : item.departments==null ? '' : item.departments}}
+   </view>
+   <view class="hcipart">
+   <rich-text nodes="{{item.hciStr}}" class="hciStr"></rich-text>
+   {{item.hciStr || item.hciName==null ? '' : item.hciName}}
+   </view>
+   </view>
+   </view>
+  </view>
+    <view class="noMore" hidden='{{noMore}}'>没有更多了...</view>
+</scroll-view>
+
+</view>

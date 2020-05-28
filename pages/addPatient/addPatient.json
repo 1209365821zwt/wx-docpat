@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "commonCell": "../../components/commonCell"
+  },
+  "navigationBarTitleText":"添加患者"
+}

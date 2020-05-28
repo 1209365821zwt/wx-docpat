@@ -1,0 +1,33 @@
+<view class="doctor-history">
+<view class="search-top">
+<van-search
+  value="{{ value }}"
+  placeholder="请输入医院，科室，医生姓名"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+  bind:change="onChange"
+  bind:blur="blurValue"
+/>
+</view>
+<view class="list">
+<List bindSource="{{bindSource}}" inputValue="{{value}}" hiddenList="{{hiddenList}}" bind:scroll="scroll" noMore="{{noMore}}" bind:doctorDetail="doctorDetail"></List>
+</view>
+<view class="search-wrapper">
+  <view class="btn-box" wx:if="{{!searched}}">
+   <view class="btn-box-in">
+   <text class="history">搜索历史</text>
+   <view class="cancel" bindtap="cancel">
+   <image src="../../assets/imgs/svg/cancel.svg" ></image>
+   </view>
+   </view>
+   <view class="searchList" wx:if="{{searchList.length>0}}">
+  <view wx:for="{{searchList}}" wx:key="index" class="search" data-item="{{item}}" bindtap="searchDoc">{{item.search}}</view>
+  </view>
+  </view>
+
+
+<view>
+</view>
+</view>
+</view>

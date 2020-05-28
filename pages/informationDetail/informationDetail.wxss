@@ -1,0 +1,193 @@
+/* pages/informationDetail/informationDetail.wxss */
+.detailCard{
+  width:750rpx;
+  height:100%;
+  background:rgba(244,245,246,1);
+  padding-top: 42rpx;
+}
+.detailCard .mainCard{
+  margin:  auto;
+  width:690rpx;
+  height:960rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 0rpx 16rpx 0rpx rgba(4,101,248,0.13);
+  border-radius: 10rpx;
+}
+.cardTop{
+  box-sizing: border-box;
+  height: 134rpx;
+  display: flex;
+  padding-left: 38rpx;
+  padding-top: 50rpx;
+}
+.cardTop .left{
+  width:8rpx;
+  height:36rpx;
+  background:rgba(10,106,248,1);
+  border-radius:4rpx;
+}
+.cardTop .middle{
+  flex: 1;
+  height:36rpx;
+  font-size:36rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(37,42,54,1);
+  line-height:36rpx;
+  padding-left: 14rpx;
+}
+.cardTop .right{
+  padding-right: 60rpx;
+  display: flex;
+}
+.cardTop .right .times{
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,69,0,1);
+}
+.cardTop .right .agreetitle{
+  color: #09D02E;
+  font-size:32rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  line-height: 32rpx;
+}
+.cardTop .right .timetitle{
+  color: #FF4500;
+  font-size:32rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  line-height: 32rpx;
+}
+.cardTop .right .timeicon{
+  width: 36rpx;
+  height: 32rpx;
+  margin-right:16rpx;
+  margin-top:4rpx;
+}
+
+.css{
+  width: 100%;
+  display: flex;
+}
+.css .imgs{
+  flex: 1;
+  height: 2rpx;
+}
+.css .cssLeft{
+  width:28rpx;
+  height:56rpx; 
+  background-color:rgba(244,245,246,1);
+  border-radius:0 28rpx 28rpx 0;
+  margin-top:-28rpx;
+}
+.css .cssRight{
+   width:28rpx;
+  height:56rpx; 
+  background-color:rgba(244,245,246,1);
+  border-radius:28rpx  0 0 28rpx;
+  margin-top:-28rpx;
+}
+.cardCenter{
+  padding: 64rpx 60rpx;
+}
+.cardCenter .maincontent view{
+  display: flex;
+}
+.cardCenter .maincontent view .textLeft{
+  width: 224rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  padding: 20rpx
+}
+.cardCenter .maincontent view .textRight{
+  height: 32rpx;
+  line-height: 32rpx;
+  padding: 20rpx;
+  
+}
+.cardCenter .maincontent .seeDoctor{
+  display: flex;
+  position: relative;
+}
+.cardCenter .maincontent .seeDoctor .imgs{
+  flex: 1;
+  display: flex;
+}
+.cardCenter .maincontent .seeDoctor .textimg{
+   height: 32rpx;
+  line-height: 32rpx;
+  padding: 20rpx;
+}
+.cardCenter .maincontent .seeDoctor .textLeft{
+  width: 224rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  padding: 20rpx
+}
+
+.cardCenter .maincontent .seeDoctor .textimg .imgurl{
+  width: 200rpx;
+  height: 200rpx;
+}
+.cardCenter .maincontent .seeDoctor  .imgShow{
+  position: absolute;
+  width: 312rpx;
+  height: 248rpx;
+  right:-10rpx;
+  top:120rpx;
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  margin-top:200rpx;
+}
+.btns .no{
+  width: 140rpx;
+  height: 64rpx;
+  border-radius:6px;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  color: #0465F8;
+border:1px solid rgba(4,101,248,1);
+margin-right:-120rpx;
+}
+.btns .agree{
+  width: 140rpx;
+  height: 64rpx;
+  border-radius:6px;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  color: #fff;
+  background: rgba(4,101,248,1)
+
+}
+.recard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top:40rpx;
+}
+.recard .texts{
+  height:24rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(187,192,195,1);
+  line-height:24rpx;
+}
+.recard .content{
+  width: 648rpx;
+  height:24rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(187,192,195,1);
+  line-height:36rpx;
+}
+.recard .content .add{
+  color: #0465F8
+}

@@ -1,0 +1,34 @@
+/* pages/privacy/index.wxss */
+.main-privacy{
+  width: 100%;
+  height: 100%;
+}
+.main-privacy .main{
+  width: 85%;
+  margin: 0 auto;
+}
+.main-privacy .main .titleTop{
+  width: 100%;
+  height: 100rpx;
+  font-size: 44rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  text-align: center;
+}
+.main-privacy .main .titlecount{
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.main-contant{
+  margin-top:30rpx
+}
+.main-contant .list .headline{
+  font-size: 30rpx;
+  line-height: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.main-contant .list .contentList .text{
+   line-height: 40rpx;
+   margin-bottom: 20rpx;
+}

@@ -1,0 +1,52 @@
+<view class="calendar">
+  <!-- tab导航栏 -->
+  <!-- scroll-left属性可以控制滚动条位置 -->
+  <!-- scroll-with-animation滚动添加动画过渡 -->
+  <view class="tabBar">
+    <!-- <view class="tabYear">{{currentYear}}</view> -->
+    <picker mode="date" fields="year" value="{{currentYear}}" end="2099-01-01" start="2019-01-01" bindchange="getDateTime">
+      <view class="tabYear">
+          {{currentYear}}
+          <image class="icon" src="../../assets/imgs/icon.png"></image>
+      </view>
+    </picker>
+    <view class="pickerShadow"></view>
+    <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+      <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+        <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 页面内容 -->
+  <view class="tab-box">
+  <!-- <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="swiperTab"> -->
+    <!-- <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="index" class="tab-content"> -->
+    <block class="tab-content">
+      <!-- <swiper-item> -->
+        <view class='content'>
+          <view class="header_bac highlight">日</view>
+          <view class="header_bac">一</view>
+          <view class="header_bac">二</view>
+          <view class="header_bac">三</view>
+          <view class="header_bac">四</view>
+          <view class="header_bac">五</view>
+          <view class="header_bac">六</view>
+          <view 
+            wx:for="{{allArr}}" 
+            wx:key="index"
+            bindtap="getDayClick"
+            data-item="{{item}}"
+            data-index="{{index}}"
+            class="{{item.month == 'current' ? '' : 'gray'}} 'bac' {{item.currenDay || item.selected ? 'currentDay' : ''}} {{item.num ? 'num' : ''}}">
+            <text>{{item.date}}</text>
+            <text class="itemNum" wx:if="{{item.num}}" >{{item.num}}人</text>
+          </view>
+        </view>
+        <view class="legend">
+          <view wx:for="{{legend}}" wx:key="index" class="legend_item"><view class="{{'icon'+index}} 'icon'"></view>{{item}}</view>
+        </view>
+      <!-- </swiper-item> -->
+    </block>
+  <!-- </swiper> -->
+  </view>
+</view>

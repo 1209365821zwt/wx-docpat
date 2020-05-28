@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "patientDetail": "../../components/patientDetail"
+  },
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor":"#227CF7",
+  "navigationBarTextStyle": "white"
+}

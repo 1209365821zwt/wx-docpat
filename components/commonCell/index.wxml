@@ -1,0 +1,102 @@
+<!--components/vanCell/index.wxml-->
+<view class="comon_form {{inType=='avatar' && 'isAvatar'}} ">
+  <!-- dialog必须在父组件中写入 -->
+  <!-- <van-dialog id="van-dialog" wx:if="{{ inType == 'upload'}}"/> -->
+  <view class="icon" wx:if="{{ require }}">*</view>
+  <view class="view_itemCon commonStype" wx:if="{{inType =='select'}}">
+    <view class="commonLabel" style="width:{{ labelWidth }}">{{ label }}</view>
+    <picker bindchange="bindPickerChange" value="{{ index }}" range="{{columns}}" range-key="{{'name'}}"	 >
+      <view class="'picker' {{ itemValue!==null ? '' : 'placeC'}} {{ rightValue ? 'rightValue' : ''}}">
+        {{itemValue !== null ? columns[itemValue].name : '请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="view_itemCon commonStype" wx:elif="{{inType =='input' || inType == 'DisInput'}}" >
+    <view class="commonLabel" style="width:{{ labelWidth }}">{{ label }}</view>
+    <van-field
+      placeholder="{{placeV}}"
+      label=""
+      value="{{ itemValue }}"
+      data-key="{{ key }}"
+      disabled="{{ inType == 'DisInput'}}"
+      placeholder-style="color:rgba(37, 58, 82, 0.3)"
+      customStyle="padding:0;line-height: 80rpx;height: 80rpx;{{rightValue ? 'padding-right: 56rpx' : ''}}"
+      bindinput="bindPickerChange"
+      class="fieldIn"
+      type="{{key == 'phone' || key == 'newPhone' ? 'number' : 'text'}}"
+      input-align="{{rightValue ? 'right' : 'left'}}"
+      border="{{ false }}"
+      />
+  </view>
+  <view class="view_itemCon commonStype textareaB" wx:elif="{{inType =='disabled'}}">
+    <view class="commonLabel" style="width:{{ labelWidth }}">{{ label }}</view>
+    <van-field
+      placeholder=""
+      placeholder-style="color:rgba(37, 58, 82, 0.3)"
+      customStyle="padding:0;line-height: 40rpx;"
+      class="fieldIn"
+      type="textarea"
+      disabled
+      autosize
+      value="{{ itemValue }}"
+      border="{{ false }}"
+      />
+  </view>
+  <view class="view_itemCon commonStype" wx:elif="{{inType =='dataTime'}}">
+    <view class="commonLabel" style="width:{{ labelWidth }}">{{ label }}</view>
+    <picker mode="date" 
+      bindchange="bindPickerChange" 
+      value="{{itemValue}}" range="{{columns}}" >
+      <view class="'picker' {{ itemValue ? '' : 'placeC'}} {{ rightValue ? 'rightValue' : ''}}">{{itemValue ? itemValue : '请选择'}}
+      </view>
+    </picker>
+  </view>
+  <view class="view_itemCon commonStype avatar-upload" wx:elif="{{inType =='avatar'}}">
+    <view class="commonLabel" style="width:{{ labelWidth }}">{{ label }}</view>
+      <view class="'picker' {{ !itemValue && 'placeC'}} {{ rightValue && 'rightValue'}} ">
+        <van-uploader file-list="{{fileList}}" max-count="1" 
+          bind:delete="deleteReady" bind:after-read="uploaderAfterReady" 
+          accept="image" preview-size='110rpx'>
+        </van-uploader>
+      </view>
+  </view>
+  <view class="view_itemCon {{isBorder ? 'commonUp' : ''}}" wx:elif="{{inType == 'upload'}}">
+    <view class="commonLabel" style="width:{{ labelWidth }}" wx:if="{{label}}">{{ label }}</view>
+    <van-uploader 
+      max-count="3"
+      file-list="{{fileList}}"
+      preview-size="200rpx" 
+      accept="image"
+      bind:delete="deleteReady"
+      bind:after-read="uploaderAfterReady">
+      <view class="uploader_con">
+        <van-icon name="plus" size="84rpx"/>
+        <view class="uploader_text">上传图片</view>
+      </view>
+    </van-uploader>
+  </view>
+  <view class="view_itemCon commonStype searchI" wx:else="{{inType =='searchSelect'}}">
+    <view class="commonLabel" style="width:{{ labelWidth }}">{{ label }}</view>
+    <van-field
+      placeholder="请输入并选择"
+      placeholder-style="color:rgba(37, 58, 82, 0.3)"
+      customStyle="padding:0;line-height: 40rpx;"
+      class="fieldIn"
+      autosize
+      input-align="{{rightValue ? 'right' : 'left'}}"
+      bindinput="bindkeyinput"
+      value="{{ itemValue }}"
+      border="{{ false }}"
+      />
+    <!-- <view class="searchContent" wx:if="{{currentList && currentList.length && itemValue}}">
+      <view class="search_view" wx:for="{{currentList}}">{{item['name']}}</view>
+    </view> -->
+    <picker bindchange="bindPickerChange" value="index" range="{{currentList}}" range-key="{{'name'}}"	 >
+      <view class="searchPick">
+        <van-icon name="arrow-down" size="28rpx" class="right_icon" />
+      </view>
+    </picker>
+  </view>
+  <van-icon name="arrow" size="28rpx" class="right_icon" wx:if="{{ icon == 'rightIcon'}}" />
+  <van-icon name="arrow-down" size="28rpx" class="right_icon" wx:elif="{{ icon == 'downIcon'}}" />
+</view>

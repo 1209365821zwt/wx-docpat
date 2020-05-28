@@ -1,0 +1,84 @@
+/* pages/patientDetail/index.wxss */
+.patientDetail{
+  width: 100%;
+  height: 100%;
+}
+.patientDetail .patientTop{
+  height:346rpx;
+  background:linear-gradient(180deg,rgba(4,101,248,1) 0%,rgba(115,199,243,1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.patientDetail .patientTop .touxiang{
+  width: 210rpx;
+  height: 210rpx;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.patientDetail .patientTop .touxiang image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.patientContent .contentop .msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100rpx;
+}
+.patientContent .contentop .msg .name{
+  text-align: center;
+  height:36rpx;
+  font-size:36rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(37,58,82,1);
+  line-height:36rpx;
+  letter-spacing:2rpx;
+  padding: 24rpx 0 16rpx 0;
+}
+.patientDetail .patientContent{
+  width: 750rpx;
+  height: 100%;
+  margin-top:-179rpx;
+}
+.patientDetail .patientContent .contentop{
+
+  width: 100%;
+  height: 180rpx;
+  background: rgba(255,255,255,1);
+  border-radius: 50% / 100% 100% 0 0;
+}
+.patientDetail .patientContent .contentop .inject{
+  padding-top: 40rpx;
+  box-sizing: border-box;
+  margin-left: 40rpx;
+  display: flex;
+}
+.patientDetail .patientContent .contentop .inject .left{
+  width:240rpx;
+  height:4rpx;
+  background:rgba(244,245,246,1);
+  margin-right:40rpx;
+}
+.patientDetail .patientContent .contentop .inject .right{
+   width:240rpx;
+  height:4rpx;
+  background:rgba(244,245,246,1);
+  margin-left:40rpx;
+}
+.patientDetail .patientContent .contentop .inject .injectRecord{
+  width:112rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(187,192,195,1);
+  line-height:40rpx;
+  margin-top: -15rpx;
+}

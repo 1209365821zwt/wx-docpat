@@ -1,0 +1,28 @@
+<!--pages/PatientData/PatentData.wxml-->
+<view class="PatientData">
+  <commonCell 
+    labelWidth="200rpx"
+    label="您的姓名："
+    key="patientName"
+    require
+    bindsendObj="updateValue"
+    inpValue="{{patientName && patientName}}"
+    inType="input"/>
+  <commonCell 
+    labelWidth="200rpx"
+    label="您的性别："
+    columns="{{columns}}"
+    key="gender"
+    require
+    icon="downIcon"
+    defValue="{{gender}}"
+    bindsendObj="updateValue"
+    inType="select"/>
+    <button class="getphone button-hover" 
+      open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <commonCell labelWidth="200rpx" label="手机号" key="phone"  placeV="{{phone ? phone : '未绑定'}}"
+        require icon="rightIcon"  defValue="phone" bindsendObj="updateValue" 
+        inType="DisInput"  inpValue="{{ phone}}"/>
+    </button>
+    <button class="btnCommon" bindtap="savePatientData">保存</button>
+</view>

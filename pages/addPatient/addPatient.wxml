@@ -1,0 +1,95 @@
+<!--pages/addPatient/addPatient.wxml-->
+<view class="addPatient">
+  <van-tabs active="{{ active }}"
+    class="tabsStyle"
+    bind:change="onChange">
+    <van-tab title="二维码添加">
+      <view class="tab_content">
+        <view class="tab_title">
+          <view>扫一扫</view>
+          <view>轻松加入随访</view>
+        </view>
+          <!-- bindlongpress="longpressTap" -->
+        <image class="imageB" src="{{urls}}"
+          bindtap="previewImage" 
+          ></image>
+        <view class="image_title">长按二维码分享及保存相册</view>
+      </view>
+    </van-tab>
+    <van-tab title="手动添加">
+      <view class="handToAdd">
+        <van-dialog id="van-dialog"/>
+        <form catchsubmit="formSubmit">
+          <commonCell 
+            labelWidth="200rpx"
+            label="患者姓名："
+            key="patientName"
+            require
+            bindsendObj="updateValue"
+            inType="input"/>
+          <commonCell 
+            labelWidth="200rpx"
+            label="患者性别："
+            columns="{{list1}}"
+            key="gender"
+            require
+            icon="downIcon"
+            bindsendObj="updateValue"
+            inType="select"/>
+          <commonCell 
+            labelWidth="200rpx"
+            label="手机号："
+            key="phone"
+            require
+            icon="rightIcon"
+            defValue="{{phone}}"
+            bindtap="vanPopupShow"	
+            bindsendObj="updateValue"
+            inType="DisInput"/>
+          <commonCell 
+            labelWidth="200rpx"
+            label="本次注射时间："
+            key="injectionTime"
+            require
+            icon="downIcon"
+            bindsendObj="updateValue"
+            inType="dataTime"/>
+          <commonCell 
+            labelWidth="200rpx"
+            label="是否首次注射："
+            key="isFirst"
+            require
+            icon="downIcon"
+            columns="{{ list }}"
+            bindsendObj="updateValue"
+            inType="select"/>
+          <commonCell 
+            labelWidth="200rpx"
+            columns="{{injectionList}}"
+            icon="downIcon"
+            require
+            key="injectionPosition"
+            bindsendObj="updateValue"
+            defValue="{{injectionPosition}}"
+            label="注射部位："
+            inType="select"/>
+          <commonCell 
+            labelWidth="180rpx"
+            label="就诊记录："
+            key="visitRecords"
+            bindsendObj="updateValue"
+            inType="upload"/>
+          <commonCell 
+            labelWidth="200rpx"
+            label="下次注射时间："
+            key="nextInjectionTime"
+            require
+            bindsendObj="updateValue"
+            icon="downIcon"
+            inType="dataTime"/>
+          <button class="btnCommon" formType="submit">保存</button>
+          </form>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>

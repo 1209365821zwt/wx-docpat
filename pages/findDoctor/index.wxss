@@ -1,0 +1,106 @@
+/* pages/findDoctor/index.wxss */
+.find-doctor{
+  width: 100%;
+  height: 100%;
+  background: #F4F5F6;
+  display: flex;
+  flex-direction: column;
+}
+.find-doctor .search-input{
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20rpx;
+  border-bottom: 10rpx solid #F4F5F6;
+  position: relative;
+}
+.search-input image{
+  position: absolute;
+  width: 34rpx;
+  height: 32rpx;
+  top: 0;
+  left: 70rpx;
+  padding-top: 15rpx;
+}
+.search-input .input{
+  width:590rpx;
+  height:64rpx;
+  background:#F4F5F6;
+  border-radius:40rpx;
+  padding-left: 80rpx;
+  color: #666; 
+  font-size: 28rpx;
+  line-height: 64rpx;
+}
+.list{
+  flex: 1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.list .top{
+  display: flex;
+  height: 68rpx;
+  background: white;
+  margin-top: -12rpx;
+}
+.list .top .all{
+  height:24rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(37,58,82,1);
+  line-height:24rpx;
+  padding: 24rpx 12rpx 20rpx 70rpx;
+}
+.list .top image{
+  width: 16rpx;
+  height: 8rpx;
+  padding-top: 32rpx;
+  vertical-align: middle;
+}
+.select{
+  height: 100%;
+}
+.list .select .van-tree-select{
+  width: 100%;
+  height: 100%!important;
+}
+.select .van-tree-select .van-tree-select__content{
+  flex: 1;
+}
+.view-search {
+  padding: 12rpx 30rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.view-search-input {
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 0px 70rpx 0px 20rpx;
+  font-size: 32rpx;
+}
+.searchHigh {
+  color: #ff0000;
+}
+.oneText {
+ line-height: 50rpx;
+ margin: 15;
+ text-align: left;
+ color: #9B9B9B;
+ font-size: 32rpx;
+ text-indent:1rem;
+}
+.currentText {
+  color: #0099FF;
+}
+.select .van-sidebar-item--selected,.van-sidebar-item--selected.van-sidebar-item--hover{
+  border-color: #0099FF;
+} 
+.select .van-tree-select .van-tree-select__content .van-tree-select__item.van-tree-select__item--active {
+  color:  #0099FF;
+}

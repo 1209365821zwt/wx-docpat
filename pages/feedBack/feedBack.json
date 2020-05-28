@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "commonCell": "../../components/commonCell"
+  },
+  "navigationBarTitleText":"意见反馈"
+}

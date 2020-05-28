@@ -1,0 +1,52 @@
+<view class="doctor-detail">
+  <!-- <patientHeader status="{{ status }}" hcpDetail="{{ docDetail }}" value="{{value}}"/> -->
+<view class="patient-top">
+    <image src="../../assets/imgs/svg/back.svg"></image>
+  </view>
+  <view class="doctor-top">
+   <view class="inclubs">
+   <image src="../../assets/imgs/svg/backIcon.svg"></image>
+   <view class="includes-detail">
+        <image wx:if="{{status==0 }}" src="../../assets/imgs/svg/touxiang.svg"></image>
+        <!-- <view class="text" wx:if="{{status==0 }}">
+          <text class="tests"> 您暂未加入医生随访</text>
+        </view> -->
+        </view>
+            <view class="includes-submit" wx:if="{{status==0 || status}}">
+        <image src="{{docDetail.headPortrait ? docDetail.headPortrait : '../../assets/imgs/svg/touxiang.svg'}}"></image>
+        <view class="text">
+          <view class="right">
+            <view class="right-top">
+              <text class="name">{{docDetail.hcpName || ''}}</text>
+              <text class="title">{{docDetail.jobTitle || ''}}</text>
+              <view class="status">
+                <text wx:if="{{status==1}}" class="pending">审核中</text>
+                <text wx:elif="{{status==2}}" class="success">已同意</text>
+              </view>
+            </view>
+            <view class="right-bottom">
+              <text class="job">{{docDetail.departments || ''}}</text>
+              <text class="hcp">{{docDetail.hciName || ''}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+   </view>
+  <view class="doctor-content">
+    <view class="leftop">
+      <image src="../../assets/imgs/png/leftop.png"></image>
+    </view>
+    <view class="content">
+      <text>{{docDetail.presentation ? docDetail.presentation : '欢迎加入我的随访，有我陪你一路前行，治愈之路上你不再孤单！'}}</text>
+    </view>
+    <view class="bottomtop">
+      <image src="../../assets/imgs/png/bottomtop.png"></image>
+    </view>
+  </view>
+  <view class="btns">
+    <button class="wait" wx:if="{{status==1}}">审核中</button>
+    <button class="agree" wx:elif="{{status==2}}" bindtap="clearelation">解除随访关系</button>
+    <button class="noData" wx:elif="{{status==0 || status==3 || status==4 || status==5}}" bindtap="followup">加入随访</button>
+  </view>
+</view>

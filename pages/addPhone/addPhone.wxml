@@ -1,0 +1,28 @@
+<!--components/addPhone/addPhone.wxml-->
+<view class="addPhone">
+  <van-cell-group>
+    <commonCell 
+      labelWidth="200rpx"
+      label="患者手机号："
+      key="newPhone"
+      placeV="请输入患者手机号"
+      bindsendObj="updateValue"
+      inType="input"/>
+    <van-field
+      value="{{ code }}"
+      center
+      clearable
+      label="验证码："
+      bindinput="codeBlur"
+      placeholder-style="color:rgba(37, 58, 82, 0.3)"
+      placeholder="请输入验证码"
+      type="number"
+      use-button-slot
+    >
+      <van-button slot="button" size="small"
+        bindtap="getPhoneAuthToken"
+        type="primary" class="phoneBtn">获取验证码</van-button>
+    </van-field>
+  </van-cell-group>
+  <button class="btnCommon" bindtap="saveInjectionRecord">保存</button>
+</view>

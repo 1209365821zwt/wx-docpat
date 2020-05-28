@@ -1,0 +1,25 @@
+{
+  "name": "dp_platform",
+  "version": "1.0.0",
+  "description": "使用vant for小程序组件开发\r     提交前 npm run lint进行格式化代码校验\r ## 重要：使用前请npm install 安装依赖 安装后点击开发者-工具-构建npm 详情-本地设置-使用npm模块 ，重启小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix app.js  components pages utils api"
+  },
+  "dependencies": {  
+    "@vant/weapp": "^1.3.0",
+    "miniprogram-sm-crypto": "^0.1.0",
+    "vant-weapp": "^0.5.28"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://code.aliyun.com/xiaofei.liu/DP_platform.git"
+  }
+}

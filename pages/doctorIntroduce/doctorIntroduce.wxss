@@ -1,0 +1,17 @@
+/* pages/doctorIntroduce/doctorIntroduce.wxss */
+.doctorIntroduce{
+  padding: 40rpx 60rpx;
+  height: 100%;
+}
+.doctorIntroduce .introductBox{
+  width:630rpx;
+  height:480rpx;
+  background:rgba(248,251,255,1);
+  border-radius:6rpx;
+  border:2rpx solid rgba(187,192,195,1);
+}
+.doctorIntroduce textarea{
+  line-height: 40rpx;
+  color:rgba(37, 58, 82, 1);
+  min-height:300rpx !important;
+}

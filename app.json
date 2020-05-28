@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/calendar/calendar",
+    "pages/informationDetail/informationDetail",
+    "pages/setting/setting",
+    "pages/patientDetail/index",
+    "pages/message/message",
+    "pages/PatientInfo/PatientInfo",
+    "pages/addPatient/addPatient",
+    "pages/injectionRecord/injectionRecord",
+    "pages/pasdocDetail/index",
+    "pages/addPhone/addPhone",
+    "pages/doctorIntroduce/doctorIntroduce",
+    "pages/findDoctor/index",
+    "pages/findDoctorHistory/index",
+    "pages/feedBack/feedBack",
+    "pages/followUp/followUp",
+    "pages/PatientData/PatientData",
+    "pages/noAccess/noAccess",
+    "pages/userAgreement/index",
+    "pages/privacy/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#0465F8",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/imgs/content.png",
+        "selectedIconPath": "assets/imgs/content_green.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "assets/imgs/message.png",
+        "selectedIconPath": "assets/imgs/message_green.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/imgs/mine.png",
+        "selectedIconPath": "assets/imgs/mine_green.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+  }
+}

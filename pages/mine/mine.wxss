@@ -1,0 +1,110 @@
+/* pages/mine/mine.wxss */
+
+.header {
+  height: 294rpx;
+  position: relative;
+  color: #fff;
+  line-height: 1;
+}
+
+
+.header .set {
+  color: #fff;
+  position: absolute;
+  right: 42rpx;
+  top: 12rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.header .avatar {
+  width: 128rpx;
+  height: 128rpx;
+  min-width: 64px;
+  min-height: 64px;
+  background: #eee;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mine-content {
+  display: flex;
+  padding-left: 64rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-size: 40rpx;
+  position: absolute;
+  top: 36rpx;
+}
+
+.mine-content .title {
+  display: flex;
+  padding-top: 10rpx;
+}
+
+.detail-content {
+  padding-left: 40rpx;
+}
+
+.title text {
+  font-size: 40rpx;
+  font-weight: bold;
+  padding-right: 16rpx;
+}
+
+.title view {
+  font-size: 24rpx;
+  height: 40rpx;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  padding: 0 16px;
+}
+
+.det {
+  padding-top: 30rpx;
+  font-size: 28rpx;
+  width: 90%;
+  line-height: 38rpx;
+}
+
+.dept {
+  padding-right: 26rpx;
+}
+
+.item-img {
+  width: 28rpx;
+  height: 32rpx;
+  margin-right: 22rpx;
+}
+.list-item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 32rpx;
+  font-size: 32rpx;
+  color: #253a52;
+}
+
+.item-text {
+  width: calc(100% - 84rpx);
+  height: 100%;
+  line-height: 102rpx;
+  border-bottom: 2rpx solid #eef0f4;
+  position: relative;
+}
+
+.right-arrow {
+  width: 16rpx;
+  height: 28rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.line{
+  margin-top: 58rpx;
+  height: 4rpx;
+  background: #F4F5F6;
+  width: calc(100% - 80rpx);
+  margin: 0 auto;
+}

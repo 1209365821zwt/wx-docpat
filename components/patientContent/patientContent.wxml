@@ -1,0 +1,46 @@
+<!--components/patientContent/patientContent.wxml-->
+<view class="patientContent">
+	<view class="inject-record">
+		<view class="left"></view>
+		<view class="record">注射记录</view>
+		<view class="right"></view>
+	</view>
+	<view class="noData" wx:if="{{ !list || !list.length }}">
+		<empty empty_text="暂无注射记录" />
+	</view>
+	<view class="patient-list">
+		<view class="list" wx:if="{{list && list.length || status==2 || status==1}}">
+			<view class="lists" wx:for="{{list}}" wx:key="index" bindtap="goInjectionRecord" data-item="{{item}}">
+				<view class="times">
+					<view>{{item.injectionTimeYear}}</view>
+					<view>{{item.injectionTimeMonthDay}}</view>
+				</view>
+				<view class="css">
+					<view class="top"></view>
+					<image src="../../assets/imgs/svg/Group.svg"></image>
+					<view class="bottom"></view>
+				</view>
+				<view class="cell">
+					<view class="icons"></view>
+					<text class="left">
+            <text wx:if="{{item.status==0 || item.status==3}}">下次注射</text>
+					<text wx:elif="{{item.status==2 || item.status==1}}">第{{item.injectionNum}}次注射</text>
+					</text>
+					<view class="center">
+						<text class="blue" wx:if="{{item.status==1 && type == 'doc'}}">待确认</text>
+						<text class="blue" wx:if="{{item.status==1 && type == 'pat'}}">待医生确认</text>
+						<text class="sure" wx:if="{{item.status==2}}">已确认</text>
+						<text class="outime" wx:if="{{item.status==3}}">已逾期{{item.beOverdue}}天</text>
+						<text class="waitinject" wx:if="{{item.status==0}}">待注射</text>
+					</view>
+					<view class="right">
+						<image src="../../assets/imgs/svg/Path.svg"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="noMore" hidden='{{ noMore || !list || !list.length}}'>没有更多了...</view>
+		<view class="isIos" style="height: 100px;" wx:if="{{isIos&&list.length}}"></view>
+	</view>
+</view>

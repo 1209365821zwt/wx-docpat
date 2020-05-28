@@ -1,0 +1,5 @@
+<!--pages/patientDetail/index.wxml-->
+<view class="patientDetail">
+  <patientDetail patient="{{hcpDetail}}" patientId="{{ patientId }}" isSetting="{{true}}"/>
+  <patientContent status="{{ status }}" list="{{ list }}" noMore="{{noMore}}" isIos="{{isIos}}" patientId="{{patientId}}"/>
+</view>

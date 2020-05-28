@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "calendar": "../../components/calendarBox/calendarBox",
+    "empty": "../../components/empty/empty",
+    "doctorPage": "../../components/doctorPage/doctorPage",
+    "patientHeader": "../../components/patientHeader/patientHeader",
+    "patientContent": "../../components/patientContent/patientContent",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}
